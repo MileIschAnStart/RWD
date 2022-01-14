@@ -142,6 +142,7 @@ body {
     vertical-align: baseline;
     background: transparent;
     line-height: 1;
+    font-family: 'Hurme-Regular';
 }
 
 h1 {
@@ -154,7 +155,7 @@ h1 {
     text-align: center;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
-
+    font-family:  'Canela-Light';
 }
 
 h1, div, p, h3, h4 {
@@ -384,14 +385,38 @@ header .wrapper-content {
     transition: all 300ms ease 0s;
     cursor: pointer;
     text-align: center;
+    margin-bottom: 30px;
 }
 
-.navbar.active {
+.navbar .active {
     color: rgb(170, 135, 104);
 } 
 .navbar li:hover, .navbar li:active, .navbar li:focus {
     color: rgb(170, 135, 104);
     transition: all 300ms ease 0s;
+}
+
+.cart-icon, .search-icon, .user-icon {
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.cart-icon svg:hover,
+.cart-icon svg:active,
+.cart-icon svg:focus,
+.search-icon svg:hover,
+.search-icon svg:active,
+.search-icon svg:focus,
+.user-icon svg:hover,
+.user-icon svg:active,
+.user-icon svg:focus {
+    stroke: rgb(170, 135, 104);
+}
+
+header .flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 /* HERO
@@ -429,6 +454,7 @@ header .wrapper-content {
     height: 100%;
     z-index: -30;
     object-fit: cover;
+    object-position: top;
 }
 
 .hero .overlay {
@@ -1515,7 +1541,7 @@ button.to-top {
     height: 56px;
     border-radius: 50%;
     position: absolute;
-
+    cursor: pointer;
     background-color: rgba(170, 135, 104, 0.8);
     left: 0px;
     right: 0px;
@@ -1594,6 +1620,9 @@ footer .row.first p.mb-32 {
 
 footer .row.first p.mb-8 {
     margin-bottom: 8px;
+    color: white;
+    font-family: 'Canela-Light';
+    font-size: calc(22px + 10 * ((100vw - 320px) / 1600));
 }
 
 footer .row.first p.mb-8 a {

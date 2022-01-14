@@ -12,7 +12,7 @@ $(document).ready(function () {
         $(".navbar").animate({ left: "0" });
     });
     $(".closeNav").click(function () {
-    $(".navbar").animate({ left: "100%" });
+        $(".navbar").animate({ left: "100%" });
     });
 
     // Display scroll down icon on mobile device-------------------------------------
@@ -31,7 +31,7 @@ $(document).ready(function () {
         $("footer").css("height", "auto");
         $(".to-top").css("bottom", "-28px");
     }
-    
+
     // Flip back to top -----------------------------------------------------
     $(".to-top").click(function () {
         $('html, body').animate({ scrollTop: 0 }, 'fast');
@@ -135,8 +135,6 @@ $(document).ready(function () {
         }
 
         if (st > lastScrollTop) {// downscroll code
-            console.log("down");
-
             // Menu
             $("header .wrapper-scroll-effect").removeClass("bg-menu").css("position", "absolute");
 
@@ -144,19 +142,14 @@ $(document).ready(function () {
             // $(".line").css("margin-top", $margin);
 
         } else { // upscroll code
-            console.log("up");
-
             // Menu
             $("header .wrapper-scroll-effect").addClass("bg-menu").css("position", "fixed");
             if ($window.scrollTop() == 0) {
                 // Detect if scrolled to top
                 $("header .wrapper-scroll-effect").removeClass("bg-menu").css("position", "absolute");
             }
-
             $margin = "0px";
             $(".line").css("margin-top", $margin);
-
-
         }
 
         lastScrollTop = st;
@@ -222,38 +215,36 @@ $(document).ready(function () {
     var slideHeight = $(".slide-item").height();
     var slideUlWidth = slideCount * slideWidth;
 
-    // $(".container-swiper").css({ "max-width": slideWidth, "height": slideHeight });
-    // $(".slider ul").css({ "width": slideUlWidth, "margin-left": - slideWidth });
-    // $(".slider ul li:last-child").prependTo($(".slider ul"));
 
-    function moveLeft() {
-        $(".wrapper-swiper").stop().animate({
-            left: + slideWidth
-        }, 300, function () {
-            // $(".slider ul li:last-child").prependTo($(".slider ul"));
-            $(".wrapper-swiper").css("left", "");
-        });
-    }
+    // function moveLeft() {
+    //     $(".parent").stop().animate({
+    //         left: + 0
+    //     }, 300, function () {
+    //         $('.section-part-5 .container-swiper').css('overflow', "visible");
+    //         $(".slider ul li:last-child").prependTo($(".slider ul"));
+    //         $(".wrapper-swiper").css("left", "");
+    //     });
+    // }
 
-    function moveRight() {
-        $(".wrapper-swiper").stop().animate({
-            left: - slideWidth
-        }, 300, function () {
-            // $(".slider ul li:first-child").appendTo($(".slider ul"));
-            $(".wrapper-swiper").css("left", "");
-        });
-    }
+    // function moveRight() {
+    //     $(".parent").stop().animate({
+    //         left: - slideWidth
+    //     }, 300, function () {
+    //         $('.section-part-5 .container-swiper').css('overflow', "visible");
+    //         $(".slider ul li:first-child").appendTo($(".slider ul"));
+    //         $(".wrapper-swiper").css("left", "");
+    //     });
+    // }
 
+    // $(".next").on("click", function () {
+    //     console.log("next");
+    //     moveRight();
+    // });
 
-    $(".next").on("click", function () {
-        console.log("next");
-        moveRight();
-    });
-
-    $(".prev").on("click", function () {
-        console.log("prev");
-        moveLeft();
-    });
+    // $(".prev").on("click", function () {
+    //     console.log("prev");
+    //     moveLeft();
+    // });
 
 });
 
