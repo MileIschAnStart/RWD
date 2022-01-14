@@ -10,9 +10,11 @@ $(document).ready(function () {
     // Menu ------------------------------------------------------------
     $(".openNav").click(function () {
         $(".navbar").animate({ left: "0" });
+        $("body").css("overflow-y", "hidden");
     });
     $(".closeNav").click(function () {
         $(".navbar").animate({ left: "100%" });
+        $("body").css("overflow-y", "visible");
     });
 
     // Display scroll down icon on mobile device-------------------------------------
@@ -67,18 +69,18 @@ $(document).ready(function () {
 
     // Section 2 Headline Parallax on desktop
 
-    // if ($(window).width() > 1200) {
-    var $horizontal = $('.parallax-inner');
-    $window.scroll(function () {
-        var s = $(this).scrollTop(),
-            d = $(document).height(),
-            c = $(this).height();
-        scrollPercent = (s / (d + c));
-        $start = parseInt($(".section-part-2 .wrapper-headline").css("left"));
-        var position = $start + (scrollPercent * ($(document).width()));
-        $horizontal.css('left', position);
-    });
-    // }
+    if ($(window).width() > 450) {
+        var $horizontal = $('.parallax-inner');
+        $window.scroll(function () {
+            var s = $(this).scrollTop(),
+                d = $(document).height(),
+                c = $(this).height();
+            scrollPercent = (s / (d + c));
+            $start = parseInt($(".section-part-2 .wrapper-headline").css("left"));
+            var position = $start + (scrollPercent * ($(document).width()));
+            $horizontal.css('left', position);
+        });
+    }
 
 
     // Give animations class to slide up when they are in view
