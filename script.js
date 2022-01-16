@@ -7,6 +7,11 @@ $(window).on("load", function () {
 $(document).ready(function () {
     var $window = $(window);
 
+    // Welcome Button
+    if ($window.height() <= 700) {
+        $(".hero .wrapper-absolute").css("-100px");
+    }
+
     // Menu ------------------------------------------------------------
     $(".openNav").click(function () {
         $(".navbar").animate({ left: "0" });
