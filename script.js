@@ -7,9 +7,9 @@ $(window).on("load", function () {
 $(document).ready(function () {
     var $window = $(window);
 
-    // Welcome Button
+    // Welcome Button margin-top change
     if ($window.height() <= 700) {
-        $(".hero .wrapper-absolute").css("-100px");
+        $(".hero .wrapper-absolute").css("margin-top", "-100px");
     }
 
     // Menu ------------------------------------------------------------
