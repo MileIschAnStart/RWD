@@ -1879,6 +1879,10 @@ footer .row.first .wrapper-content, footer .row.first .wrapper-left, footer .row
         display: block;
 
     }
+
+    footer {
+        position: relative;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1964,20 +1968,8 @@ footer .row.first .wrapper-content, footer .row.first .wrapper-left, footer .row
         background-position: right center;
     }
 
-   
-
-  
-
- 
-
-    
-
     .main {
         margin-bottom: 0;
-    }
-
-    footer {
-        position: relative;
     }
 
     .container-lg {

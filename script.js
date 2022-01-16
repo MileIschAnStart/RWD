@@ -28,7 +28,7 @@ $(document).ready(function () {
     }
 
     // Place "to top icon" at beginning of footer -----------------------------
-    if ($(window).width() > 678) {
+    if ($(window).width() > 900) {
         $margin = parseInt($(".main").css("margin-bottom")); // Get margin-bottom of .main div => footer height
         $iconHeight = parseInt($(".to-top").css("height")); // Get height of "to-top icon"
         $bottom = $margin - $iconHeight / 2; // Calculate margin-bottom
